@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Neonet messenger </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEONet P2P Messenger</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <div class="scanlines"></div>
+
+        <div class="particles"></div>
+
+        <!-- Connection modal -->
+
+        <div class="modal" id="connectionModal">
+
+            <div class="modal-content">
+
+                <h2 class="modal-title">NEONET P2P CONNECTION</h2>
+
+                <input type="text" class="modal-input" id="yourNumberInput" placeholder="YOUR NUMBER" inputmode="numeric">
+
+                <button class="modal-btn" id="connectBtn">INITIALIZE CONNECTION</button>
+
+            </div>
+
+        </div>
+
+        <!-- Main app interface -->
+
+        <div id="mainInterface" style="display: none; height: 100%;">
+
+            <header class="header">
+
+                <div class="logo">NEONet</div>
+
+                <div class="connection-status" id="connectionStatus">DISCONNECTED</div>
+
+            </header>
+
+            <div class="connection-panel">
+
+                <input type="text" class="peer-id-input" id="peerIdInput" placeholder="ENTER PEER ID TO CONNECT">
+
+                <button class="connect-btn" id="connectPeerBtn">CONNECT</button>
+
+            </div>
+
+            <div class="main-content">
+
+                <div class="chat-view" id="chatView">
+
+                    <!-- Messages will appear here -->
+
+                </div>
+
+                <div class="input-area">
+
+                    <input type="text" class="number-input" id="recipientNumber" placeholder="DISPLAY NAME" readonly>
+
+                    <textarea class="message-input" id="messageInput" placeholder="ENCRYPTED MESSAGE..." disabled></textarea>
+
+                    <button class="send-btn" id="sendBtn" disabled>>></button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Peer ID modal -->
+
+        <div class="modal" id="peerIdModal" style="display: none;">
+
+            <div class="modal-content">
+
+                <h2 class="modal-title">YOUR PEER ID</h2>
+
+                <div style="word-break: break-all; margin-bottom: 15px; color: var(--neon-blue);" id="yourPeerId"></div>
+
+                <button class="modal-btn" id="copyPeerIdBtn">COPY ID</button>
+
+                <button class="modal-btn" style="margin-top: 10px; background: var(--darker-bg);" id="closePeerIdModal">CLOSE</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PeerJS library for WebRTC -->
+
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
